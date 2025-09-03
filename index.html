@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sugar Test Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sugar Test Form</h2>
+    <form action="/submit-sugar-test" method="post">
+      <label for="name">Patient Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="date">Test Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="type">Test Type:</label>
+      <select id="type" name="type">
+        <option value="fasting">Fasting</option>
+        <option value="postprandial">Postprandial</option>
+        <option value="random">Random</option>
+      </select>
+
+      <label for="level">Glucose Level (mg/dL):</label>
+      <input type="number" id="level" name="level" required>
+
+      <label for="notes">Additional Notes:</label>
+      <input type="text" id="notes" name="notes">
+
+      <input type="submit" value="Submit Test">
+    </form>
+  </div>
+</body>
+</html>
